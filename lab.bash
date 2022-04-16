@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function main {
 	cd /mnt/c/Users/Moritz/Documents/Ostern/Start
 	COUNTER=0
@@ -11,6 +12,8 @@ function loop {
 	(( BACK = $RANDOM % 2 ))
 
 	if [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Ostern/Start ]]; then BACK=0; fi;
+	
+	cont
 }
 
 function cont {
@@ -42,7 +45,6 @@ function create {
 }
 
 function copy {
-	echo "Jetzt suchen"
 	touch link
 	exit
 }
