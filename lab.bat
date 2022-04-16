@@ -1,6 +1,5 @@
 :MAIN
-N:
-cd N:\Ostern\Start
+cd C:\Users\Moritz\Documents\Ostern\Start
 set /A COUNTER=0
 call :loop
 
@@ -9,7 +8,7 @@ if %COUNTER% equ 22 call :copy
 
 set /A back=%random% %% 2
 
-if %BACK% equ 0 if %CD% equ N:\Ostern\Start goto :loop else call :cont
+if %BACK% equ 0 if %CD% equ C:\Users\Moritz\Documents\Ostern\Start goto :loop else call :cont
 
 :cont
 if %back% equ 0 cd ..
@@ -36,5 +35,5 @@ mkdir unten
 call :loop
 
 :copy
-copy C:\Users\Moritz\Documents\dummy.txt .\
+copy C:\Users\Moritz\Documents\link.txt .\
 EXIT
