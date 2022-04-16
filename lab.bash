@@ -10,7 +10,7 @@ function loop {
 
 	(( BACK = $RANDOM % 2 ))
 
-	if (( $BACK == 0 )) && [[ $(pwd) == C:\Users\Moritz\Documents\Test ]]; then loop; else cont; fi;
+	if (( $BACK == 0 )) && [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Test ]]; then loop; else cont; fi;
 }
 
 function cont {
