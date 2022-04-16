@@ -24,7 +24,7 @@ function check {
 }
 
 function random {
-	GO=(($($RANDOM) % 4))
+	GO=$RANDOM % 4
 	if (($GO == 0)); then cd rechts; fi
 	if (($GO == 1)); then cd links; fi
 	if (($GO == 2)); then cd oben; fi
