@@ -4,7 +4,7 @@ cd /mnt/c/Users/Moritz/Documents/Test
 COUNTER=0
 loop()
 
-loop () {
+function loop {
 	if [[$COUNTER == 10]]; then exit; fi;
 
 	BACK=[[$($RANDOM) % 2]]
@@ -12,17 +12,17 @@ loop () {
 	if [[$BACK == 0]] && [[$(pwd) == C:\Users\Moritz\Documents\Test]]; then loop(); else cont(); fi;
 }
 
-cont () {
+function cont {
 	if [[$BACK == 0]]; then cd ..; fi;
 	if [[$BACK == 1]]; then check(); fi;
 	loop()
 }
 
-check () {
+function check {
 	ls | grep "*" && (call :random) || (call :create)
 }
 
-random () {
+function random {
 GO=[[$($RANDOM) % 4]]
 if [[$GO == 0]]; cd rechts
 if [[$GO == 1]]; cd links
@@ -31,7 +31,7 @@ if [[$GO == 3]]; cd unten
 loop ()
 }
 
-create () {
+function create {
 COUNTER=[[$COUNTER + 1]]
 mkdir rechts
 mkdir links
