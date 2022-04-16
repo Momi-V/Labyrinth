@@ -5,9 +5,7 @@ call :loop
 
 :loop
 if %COUNTER% equ 22 call :link
-
 set /A BACK=%random% %% 2
-
 if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=0
 call :cont
 
