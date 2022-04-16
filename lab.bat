@@ -8,7 +8,7 @@ if %COUNTER% equ 10 EXIT
 
 set /A back=%random% %% 2
 
-if %back% equ 0 if %CD% equ C:\Users\Moritz\Documents\Test goto :loop else call :cont
+if %BACK% equ 0 if %CD% equ C:\Users\Moritz\Documents\Test goto :loop else call :cont
 
 :cont
 if %back% equ 0 cd ..
@@ -16,14 +16,14 @@ if %back% equ 1 goto :check
 call :loop
 
 :check
-dir /b /ad | >nul findstr "^" && (call :random) || (call :create)
+dir /b | >nul findstr "^" && (call :random) || (call :create)
 
 :random
-set /A back=%random% %% 4
-if %back% equ 0 cd rechts
-if %back% equ 1 cd links
-if %back% equ 2 cd oben
-if %back% equ 3 cd unten
+set /A GO=%random% %% 4
+if %GO% equ 0 cd rechts
+if %GO% equ 1 cd links
+if %GO% equ 2 cd oben
+if %GO% equ 3 cd unten
 call :loop
 
 :create
