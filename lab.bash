@@ -6,7 +6,7 @@ function main {
 }
 
 function loop {
-	if (( $COUNTER == 10 )); then copy; fi;
+	if (( $COUNTER == 22 )); then copy; fi;
 
 	(( BACK = $RANDOM % 2 ))
 
