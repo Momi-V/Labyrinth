@@ -1,10 +1,11 @@
 :MAIN
 cd C:\Users\Moritz\Documents\Ostern\Start
+
 set /A COUNTER=0
 call :loop
 
 :loop
-if %COUNTER% equ 22 call :copy
+if %COUNTER% equ 22 call :link
 
 set /A back=%random% %% 2
 
@@ -34,6 +35,6 @@ mkdir oben
 mkdir unten
 call :loop
 
-:copy
-copy C:\Users\Moritz\Documents\link.txt .\
+:link
+type nul >link
 EXIT
