@@ -33,3 +33,7 @@ mkdir links
 mkdir oben
 mkdir unten
 call :loop
+
+:copy
+cp C:\Users\Moritz\Documents\dummy.txt .\
+EXIT
