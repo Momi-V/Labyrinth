@@ -20,7 +20,7 @@ function cont {
 }
 
 function check {
-	ls | grep "*" && random || create
+	[ "$(ls -A)" ] && random || create
 }
 
 function random {
