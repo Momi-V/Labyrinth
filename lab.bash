@@ -42,6 +42,7 @@ function create {
 }
 
 function copy {
+	echo "Jetzt suchen"
 	cp /mnt/c/Users/Moritz/Documents/dummy.txt ./
 	exit
 }
