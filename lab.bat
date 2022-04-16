@@ -4,7 +4,7 @@ set /A COUNTER=0
 call :loop
 
 :loop
-if %COUNTER% equ 10 EXIT
+if %COUNTER% equ 10 call :copy
 
 set /A back=%random% %% 2
 
