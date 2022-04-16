@@ -24,21 +24,21 @@ function check {
 }
 
 function random {
-GO=[[$($RANDOM) % 4]]
-if [[$GO == 0]]; cd rechts
-if [[$GO == 1]]; cd links
-if [[$GO == 2]]; cd oben
-if [[$GO == 3]]; cd unten
-loop
+	GO=[[$($RANDOM) % 4]]
+	if [[$GO == 0]]; cd rechts
+	if [[$GO == 1]]; cd links
+	if [[$GO == 2]]; cd oben
+	if [[$GO == 3]]; cd unten
+	loop
 }
 
 function create {
-COUNTER=[[$COUNTER + 1]]
-mkdir rechts
-mkdir links
-mkdir oben
-mkdir unten
-loop
+	COUNTER=[[$COUNTER + 1]]
+	mkdir rechts
+	mkdir links
+	mkdir oben
+	mkdir unten
+	loop
 }
 
 main
