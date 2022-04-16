@@ -8,11 +8,8 @@ function main {
 
 function loop {
 	if (( $COUNTER == 22 )); then copy; fi;
-
 	(( BACK = $RANDOM % 2 ))
-
 	if [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Ostern/Start ]]; then BACK=0; fi;
-	
 	cont
 }
 
