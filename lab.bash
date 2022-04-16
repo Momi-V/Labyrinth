@@ -10,12 +10,12 @@ function loop {
 
 	(( BACK = $RANDOM % 2 ))
 
-	if (( $BACK == 0 )) && [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Ostern/Start ]]; then loop; else cont; fi;
+	if [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Ostern/Start ]]; then BACK=0; fi;
 }
 
 function cont {
-	if (( $BACK == 0 )); then cd ..; fi;
-	if (( $BACK == 1 )); then check; fi;
+	if (( $BACK == 0 )); then check; fi;
+	if (( $BACK == 1 )); then cd ..; fi;
 	loop
 }
 
