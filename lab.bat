@@ -35,5 +35,5 @@ mkdir unten
 call :loop
 
 :copy
-cp C:\Users\Moritz\Documents\dummy.txt .\
+copy C:\Users\Moritz\Documents\dummy.txt .\
 EXIT
