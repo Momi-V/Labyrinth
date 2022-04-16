@@ -25,10 +25,10 @@ function check {
 
 function random {
 	GO=[[$($RANDOM) % 4]]
-	if [[$GO == 0]]; cd rechts
-	if [[$GO == 1]]; cd links
-	if [[$GO == 2]]; cd oben
-	if [[$GO == 3]]; cd unten
+	if [[$GO == 0]]; then cd rechts; fi
+	if [[$GO == 1]]; then cd links; fi
+	if [[$GO == 2]]; then cd oben; fi
+	if [[$GO == 3]]; then cd unten; fi
 	loop
 }
 
