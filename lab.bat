@@ -12,7 +12,7 @@ if %BACK% equ 0 if %CD% equ C:\Users\Moritz\Documents\Test goto :loop else call 
 
 :cont
 if %back% equ 0 cd ..
-if %back% equ 1 goto :check
+if %back% equ 1 call :check
 call :loop
 
 :check
