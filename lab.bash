@@ -32,7 +32,7 @@ loop ()
 }
 
 create () {
-COUNTER = [[$COUNTER + 1]]
+COUNTER=[[$COUNTER + 1]]
 mkdir rechts
 mkdir links
 mkdir oben
