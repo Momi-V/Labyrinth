@@ -1,6 +1,5 @@
 :MAIN
 cd C:\Users\Moritz\Documents\Ostern\Start
-
 set /A COUNTER=0
 call :loop
 
@@ -9,12 +8,12 @@ if %COUNTER% equ 22 call :link
 
 set /A BACK=%random% %% 2
 
-if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=1
+if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=0
 call :cont
 
 :cont
-if %BACK% equ 0 cd ..
-if %BACK% equ 1 call :check
+if %BACK% equ 0 call :check
+if %BACK% equ 1 cd ..
 call :loop
 
 :check
