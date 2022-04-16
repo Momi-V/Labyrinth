@@ -8,9 +8,9 @@ function main {
 function loop {
 	if (( $COUNTER = 10 )); then exit; fi;
 
-	BACK=$RANDOM % 2
+	(( BACK = $RANDOM % 2 ))
 
-	if (( $BACK = 0 )) && [[$(pwd) == C:\Users\Moritz\Documents\Test]]; then loop; else cont; fi;
+	if (( $BACK = 0 )) && [[ $(pwd) == C:\Users\Moritz\Documents\Test ]]; then loop; else cont; fi;
 }
 
 function cont {
@@ -33,7 +33,7 @@ function random {
 }
 
 function create {
-	COUNTER=(($COUNTER + 1))
+	(( COUNTER = $COUNTER + 1 ))
 	mkdir rechts
 	mkdir links
 	mkdir oben
