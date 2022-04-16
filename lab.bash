@@ -1,25 +1,26 @@
 #!/bin/bash
-
-cd /mnt/c/Users/Moritz/Documents/Test
-COUNTER=0
-loop()
+function main {
+	cd /mnt/c/Users/Moritz/Documents/Test
+	COUNTER=0
+	loop
+}
 
 function loop {
 	if [[$COUNTER == 10]]; then exit; fi;
 
 	BACK=[[$($RANDOM) % 2]]
 
-	if [[$BACK == 0]] && [[$(pwd) == C:\Users\Moritz\Documents\Test]]; then loop(); else cont(); fi;
+	if [[$BACK == 0]] && [[$(pwd) == C:\Users\Moritz\Documents\Test]]; then loop; else cont; fi;
 }
 
 function cont {
 	if [[$BACK == 0]]; then cd ..; fi;
-	if [[$BACK == 1]]; then check(); fi;
-	loop()
+	if [[$BACK == 1]]; then check; fi;
+	loop
 }
 
 function check {
-	ls | grep "*" && random () || create ()
+	ls | grep "*" && random || create
 }
 
 function random {
@@ -28,7 +29,7 @@ if [[$GO == 0]]; cd rechts
 if [[$GO == 1]]; cd links
 if [[$GO == 2]]; cd oben
 if [[$GO == 3]]; cd unten
-loop ()
+loop
 }
 
 function create {
@@ -37,5 +38,7 @@ mkdir rechts
 mkdir links
 mkdir oben
 mkdir unten
-loop ()
+loop
 }
+
+main
