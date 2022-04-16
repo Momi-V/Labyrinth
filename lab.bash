@@ -41,6 +41,9 @@ function create {
 	loop
 }
 
-function copy { cp /mnt/c/Users/Moritz/Documents/dummy.txt ./; exit }
+function copy {
+	cp /mnt/c/Users/Moritz/Documents/dummy.txt ./
+	exit
+}
 
 main
