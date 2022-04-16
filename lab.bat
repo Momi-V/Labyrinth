@@ -1,4 +1,5 @@
 :MAIN
+N:
 cd N:\Ostern\Start
 set /A COUNTER=0
 call :loop
