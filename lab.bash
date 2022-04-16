@@ -1,13 +1,13 @@
 #!/bin/bash
 
 cd /mnt/c/Users/Moritz/Documents/Test
-COUNTER = 0
+COUNTER=0
 loop()
 
 loop () {
 	if [[$COUNTER == 10]]; then exit; fi;
 
-	BACK = [[$($RANDOM) % 2]]
+	BACK=[[$($RANDOM) % 2]]
 
 	if [[$BACK == 0]] && [[$(pwd) == C:\Users\Moritz\Documents\Test]]; then loop(); else cont(); fi;
 }
@@ -23,7 +23,7 @@ check () {
 }
 
 random () {
-GO = [[$($RANDOM) % 4]]
+GO=[[$($RANDOM) % 4]]
 if [[$GO == 0]]; cd rechts
 if [[$GO == 1]]; cd links
 if [[$GO == 2]]; cd oben
