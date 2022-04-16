@@ -19,7 +19,7 @@ function cont {
 }
 
 function check {
-	ls | grep "*" && (random()) || (create())
+	ls | grep "*" && (random ()) || (create ())
 }
 
 function random {
