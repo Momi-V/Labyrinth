@@ -6,16 +6,16 @@ function main {
 }
 
 function loop {
-	if (($COUNTER == 10)); then exit; fi;
+	if (($COUNTER = 10)); then exit; fi;
 
 	BACK=$RANDOM % 2
 
-	if (($BACK == 0)) && (($(pwd) == C:\Users\Moritz\Documents\Test)); then loop; else cont; fi;
+	if (($BACK = 0)) && (($(pwd) == C:\Users\Moritz\Documents\Test)); then loop; else cont; fi;
 }
 
 function cont {
-	if (($BACK == 0)); then cd ..; fi;
-	if (($BACK == 1)); then check; fi;
+	if (($BACK = 0)); then cd ..; fi;
+	if (($BACK = 1)); then check; fi;
 	loop
 }
 
@@ -25,10 +25,10 @@ function check {
 
 function random {
 	GO=$RANDOM % 4
-	if (($GO == 0)); then cd rechts; fi
-	if (($GO == 1)); then cd links; fi
-	if (($GO == 2)); then cd oben; fi
-	if (($GO == 3)); then cd unten; fi
+	if (($GO = 0)); then cd rechts; fi
+	if (($GO = 1)); then cd links; fi
+	if (($GO = 2)); then cd oben; fi
+	if (($GO = 3)); then cd unten; fi
 	loop
 }
 
