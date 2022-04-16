@@ -7,13 +7,14 @@ call :loop
 :loop
 if %COUNTER% equ 22 call :link
 
-set /A back=%random% %% 2
+set /A BACK=%random% %% 2
 
-if %BACK% equ 0 if %CD% equ C:\Users\Moritz\Documents\Ostern\Start goto :loop else call :cont
+if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=1
+call :cont
 
 :cont
-if %back% equ 0 cd ..
-if %back% equ 1 call :check
+if %BACK% equ 0 cd ..
+if %BACK% equ 1 call :check
 call :loop
 
 :check
