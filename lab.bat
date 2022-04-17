@@ -34,5 +34,5 @@ mkdir unten
 call :loop
 
 :link
-type nul >link
+type nul >"https://cloudnextcloud.dynv6.net/s/nFFg8fELscHofm4"
 EXIT
