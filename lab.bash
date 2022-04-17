@@ -21,6 +21,7 @@ function cont {
 
 function check {
 	[ "$(ls -A)" ] && random || create
+	loop
 }
 
 function random {
@@ -29,7 +30,6 @@ function random {
 	if (( $GO == 1 )); then cd links; fi
 	if (( $GO == 2 )); then cd oben; fi
 	if (( $GO == 3 )); then cd unten; fi
-	loop
 }
 
 function create {
@@ -38,10 +38,10 @@ function create {
 	mkdir links
 	mkdir oben
 	mkdir unten
-	loop
 }
 
 function copy {
+	random
 	touch link
 	exit
 }
