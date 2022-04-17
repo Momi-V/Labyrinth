@@ -15,7 +15,7 @@ if %BACK% equ 1 cd ..
 goto :loop
 
 :check
-dir /db | >nul findstr "^" && (call :random) || (call :create)
+dir /b /ad | >nul findstr "^" && (call :random) || (call :create)
 goto :loop
 
 :random
