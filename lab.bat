@@ -24,6 +24,7 @@ if %GO% equ 0 cd rechts
 if %GO% equ 1 cd links
 if %GO% equ 2 cd oben
 if %GO% equ 3 cd unten
+goto :eof
 
 :create
 set /A COUNTER=COUNTER+1
@@ -31,6 +32,7 @@ mkdir rechts
 mkdir links
 mkdir oben
 mkdir unten
+goto :eof
 
 :link
 call :random
