@@ -1,21 +1,21 @@
 :MAIN
 cd C:\Users\Moritz\Documents\Ostern\Start
 set /A COUNTER=0
-call :loop
+goto :loop
 
 :loop
 if %COUNTER% equ 22 call :link
 set /A BACK=%random% %% 2
 if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=0
-call :cont
+goto :cont
 
 :cont
-if %BACK% equ 0 call :check
+if %BACK% equ 0 goto :check
 if %BACK% equ 1 cd ..
-call :loop
+goto :loop
 
 :check
-dir /b | >nul findstr "^" && (call :random) || (call :create)
+dir /b | >nul findstr "^" && (goto :random) || (goto :create)
 
 :random
 set /A GO=%random% %% 4
@@ -23,7 +23,7 @@ if %GO% equ 0 cd rechts
 if %GO% equ 1 cd links
 if %GO% equ 2 cd oben
 if %GO% equ 3 cd unten
-call :loop
+goto :loop
 
 :create
 set /A COUNTER=COUNTER+1
@@ -31,7 +31,7 @@ mkdir rechts
 mkdir links
 mkdir oben
 mkdir unten
-call :loop
+goto :loop
 
 :link
 type nul >"https://cloudnextcloud.dynv6.net/s/nFFg8fELscHofm4"
