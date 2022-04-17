@@ -4,7 +4,7 @@ set /A COUNTER=0
 goto :loop
 
 :loop
-if %COUNTER% equ 22 call :link
+if %COUNTER% equ 22 goto :link
 set /A BACK=%random% %% 2
 if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=0
 goto :cont
