@@ -20,7 +20,7 @@ function cont {
 }
 
 function check {
-	[ "$(ls -A)" ] && random || create
+	[ "$(ls -d)" ] && random || create
 	loop
 }
 
