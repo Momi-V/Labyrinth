@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function main {
-	cd /mnt/c/Users/Moritz/Documents/Ostern/Start
+	cd /tree
 	COUNTER=0
 	loop
 }
@@ -9,7 +9,7 @@ function main {
 function loop {
 	if (( $COUNTER == 22 )); then copy; fi;
 	(( BACK = $RANDOM % 2 ))
-	if [[ $(pwd) == /mnt/c/Users/Moritz/Documents/Ostern/Start ]]; then BACK=0; fi;
+	if [[ $(pwd) == /tree ]]; then BACK=0; fi;
 	cont
 }
 
