@@ -1,12 +1,12 @@
 :MAIN
-cd C:\Users\Moritz\Documents\Ostern\Start
+cd C:\tree
 set /A COUNTER=0
 goto :loop
 
 :loop
 if %COUNTER% equ 22 goto :link
 set /A BACK=%random% %% 2
-if %CD% equ C:\Users\Moritz\Documents\Ostern\Start set /A BACK=0
+if %CD% equ C:\tree set /A BACK=0
 goto :cont
 
 :cont
@@ -36,5 +36,5 @@ goto :eof
 
 :link
 call :random
-type nul >"cloudnextcloud.dynv6.net s nFFg8fELscHofm4"
+type nul >link
 EXIT
